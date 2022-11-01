@@ -1,4 +1,4 @@
-# JavaScript
+#JavaScript😁
 #javascript basic #javascript immediate
 
 I am studying javascript.
