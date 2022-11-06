@@ -273,16 +273,58 @@
 
 // 금칙어 : 콜라
 
-function hasCola(str){
-    //if(str.indexOf("콜라") > -1){
-    if(str.includes("콜라")){
-        console.log("금칙어가 있습니다");
-    } else {
-        console.log("통과");
-    }
-}
+// function hasCola(str){
+//     //if(str.indexOf("콜라") > -1){
+//     if(str.includes("콜라")){
+//         console.log("금칙어가 있습니다");
+//     } else {
+//         console.log("통과");
+//     }
+// }
 
-console.log("오 ㅏ사이다가 짱이야".includes("짱이"));
-hasCola("와 사이다가 짱이야!");
-hasCola("무슨소리, 콜라가 최고야");
-hasCola("콜라");
+// console.log("오 ㅏ사이다가 짱이야".includes("짱이"));
+// hasCola("와 사이다가 짱이야!");
+// hasCola("무슨소리, 콜라가 최고야");
+// hasCola("콜라");
+
+// let arr = ["Mike", "Doyun", "Jieun"];
+
+// arr.forEach((name, index) => {
+//     console.log(name);
+// });
+
+// arr.forEach((name, index) => {
+//     console.log(`${name}, ${index}`);
+// });
+
+// let arr = [1, 2, 3, 4, 5, 6];
+
+// const result = arr.filter( (item) => {
+//     return item % 2 === 0;
+// })
+
+// console.log(result);
+
+let userList = [
+    { name: "Mike", age: 30},
+    { name: "Doyun", age: 27},
+    { name: "Jieun", age: 10}
+];
+
+// const result2 = userList.findIndex( (user)=> {
+//     if(user.age<19){
+//         return true;
+//     }
+//     return false;
+// })
+// console.log(result2);
+
+let newUserList = userList.map((user, index)=>{
+    return Object.assign({}, user,{
+        id: index + 1,
+        isAdult: user.age > 19,
+    })
+});
+
+console.log(newUserList);
+console.log(userList);
