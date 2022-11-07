@@ -166,7 +166,7 @@
 //     this.showPrice = function() {
 //         console.log(`가격은 ${price}원 입니다.`);
 //     }
-    
+
 //     //return this;
 // }
 
@@ -305,26 +305,129 @@
 
 // console.log(result);
 
-let userList = [
-    { name: "Mike", age: 30},
-    { name: "Doyun", age: 27},
-    { name: "Jieun", age: 10}
-];
+// let userList = [
+//     { name: "Mike", age: 30},
+//     { name: "Doyun", age: 27},
+//     { name: "Jieun", age: 10}
+// ];
 
-// const result2 = userList.findIndex( (user)=> {
-//     if(user.age<19){
-//         return true;
-//     }
-//     return false;
+// let newUserList = userList.map((user, index)=>{
+//     return Object.assign({}, user,{
+//         id: index + 1,
+//         isAdult: user.age > 19,
+//     })
+// });
+
+// console.log(newUserList);
+// console.log(userList);
+
+// 객체와 배열 구분하기
+
+// let user = {
+//     name: 'Doyun',
+//     age: 32,
+// };
+
+// let userList = ['Doyun', 'Jieun', 'Yuna']
+
+// console.log(typeof(user));
+// console.log(typeof(userList));
+
+// console.log(`배열확인 : ${Array.isArray(user)}`);
+// console.log(`배열확인 : ${Array.isArray(userList)}`);
+
+
+// let arr = [1, 2, 3, 4, 5, 6];
+// let result = 0;
+// let result_reduce;
+
+// arr.forEach((num) => {
+//     result += num;
 // })
-// console.log(result2);
 
-let newUserList = userList.map((user, index)=>{
-    return Object.assign({}, user,{
-        id: index + 1,
-        isAdult: user.age > 19,
-    })
-});
+// // prev는 누적값이고, cur는 현재값이다.
+// result_reduce = arr.reduce( (prev, cur) => {
+//     return prev + cur;
+// }, 20); // 초기값을 설정할 수 있다.
 
-console.log(newUserList);
-console.log(userList);
+// console.log(result);
+// console.log(result_reduce);
+
+// let userList = [
+//     {name: "Mike", age: 30},
+//     {name: "Joe", age: 20},
+//     {name: "Tomi", age: 14},
+//     {name: "Bubury", age: 27},
+//     {name: "Guzi", age: 33},
+//     {name: "Nike", age: 17}
+// ];
+
+// let result = userList.reduce( (prev, cur) => {
+//     if(cur.age > 19){
+//         prev.push(cur.name);
+//     }
+//     return prev;
+// },[])
+
+// let userList_sum_age = userList.reduce( (prev, cur) => {
+//     return prev + cur.age;
+// }, 0);
+
+// console.log(result);
+// console.log(userList_sum_age);
+
+let users = ["Doyun", "Jieun", "IU"];
+
+/*
+let user1 = users[0];
+let user1 = users[1];
+let user1 = users[2];
+*/
+
+
+//    let str = "Doyun-Jieun-IU";
+//    let [user1, user2, user3] = str.split("-");
+
+//    console.log(user1);
+//    console.log(user2);
+//    console.log(user3);
+
+// function User(name, age, ...skills) {
+//     this.name = name;
+//     this.age = age;
+//     this.skills = skills;
+// }
+
+// const user1 = new User('Doyun',32, 'html','css');
+// const user2 = new User('Jieun',31, 'JS','React');
+// const user3 = new User('IU',10, 'English');
+
+// console.log(user1);
+// console.log(user2);
+// console.log(user3);
+
+/*****
+ * 전개 구문
+ * arr1 을 [4, 5, 6, 1, 2, 3] 으로
+ *****/
+// let arr1 = [1, 2, 3];
+// let arr2 = [4, 5, 6];
+// let arr3 = [1, 2, 3];
+// let arr4 = [4, 5, 6];
+
+
+// //reverse를 하는게 핵심이지만..
+// arr2.reverse().forEach((num) => {
+//     arr1.unshift(num);
+// });
+
+// console.log(arr1); // 6,5,4,1,2,3 으로 출력
+
+// arr3 = [...arr4, ...arr3];
+// console.log(arr3);
+
+let user = {name: `Doyun`};
+let info = {age: 30};
+let fe = [`JS`, `React`]
+let lang = [`Korea`, `English`]
+console.log(user);
