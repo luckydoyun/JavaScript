@@ -426,8 +426,98 @@ let user1 = users[2];
 // arr3 = [...arr4, ...arr3];
 // console.log(arr3);
 
-let user = {name: `Doyun`};
-let info = {age: 30};
-let fe = [`JS`, `React`]
-let lang = [`Korea`, `English`]
-console.log(user);
+// let user = { name: `Doyun` };
+// let info = { age: 30 };
+// let fe = [`JS`, `React`]
+// let lang = [`Korea`, `English`]
+// //console.log(user);
+// //console.log(fe);
+
+// user = Object.assign({}, user, info, {skills: []});
+
+// fe.forEach((item) => {
+//     user.skills.push(item);
+// });
+
+// lang.forEach((item) => {
+//     user.skills.push(item);
+// })
+// console.log(user);
+
+// let user1 = {
+//     ...user,
+//     ...info,
+//     skills: [...fe, ...lang],
+// };
+// console.log(user1);
+
+
+// let num = 1;
+
+// function showTime() {
+//     console.log(`안녕하세요. 접속하신지 ${num++}초 만큼 지났습니다.`);
+//     if (num > 5) {
+//         clearInterval(tId);
+//     }
+// }
+
+// const tId = setInterval(showTime, 1000);
+
+// const doyun = {
+//     name: "Doyun",
+// };
+
+// const jieun = {
+//     name: "Jieun",
+// };
+
+// function showThisName(){
+//     console.log(this.name);
+// }
+// // showThisName();
+// // showThisName.call(doyun);
+// // showThisName.call(jieun);
+
+// function update(birthYear, occupation){
+//     this.birthYear = birthYear;
+//     this.occupation = occupation;
+// }
+
+// const updateDoyun = update.bind(doyun);
+// updateDoyun(19992, "IT DEVELOPER");
+
+// console.log(doyun);
+
+
+// const nums = [3, 10, 1, 6, 4];
+// // const minNum = Math.min(...nums);
+// // const maxNum = Math.max(...nums);
+
+// //const minNum = Math.min.apply(null, nums);
+// const minNum = Math.min.call(null, ...nums);
+
+// //const maxNum = Math.max.apply(null, nums);
+// const maxNum = Math.max.call(null, ...nums);
+
+// console.log(minNum);
+// console.log(maxNum);
+
+
+// const user = {
+//     name: "Doyun",
+//     showname: function() {
+//         console.log(`hello, ${this.name}`);
+//     },
+// };
+
+// user.showname();
+
+// // 아래 3가지의 case의 차이점을 이해해야한다.
+// console.log("---- ↓")
+// let fn = user.showname;
+// fn();
+// fn.call(user);
+// fn.apply(user);
+
+// let boundFn = fn.bind(user);
+// boundFn();
