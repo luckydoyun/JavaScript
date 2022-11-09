@@ -521,3 +521,62 @@ let user1 = users[2];
 
 // let boundFn = fn.bind(user);
 // boundFn();
+
+// const car = {
+//     wheels: 4,
+//     driver() {
+//         console.log("driver...");
+//     },
+// };
+
+// const bmw = {
+//     color: "red",
+//     navigation: 1,
+// };
+
+// const benz = {
+//     color: "balck",
+// };
+
+// const audi = {
+//     color: "blue",
+// }
+
+// bmw.__proto__ = car;
+// benz.__proto__ = car;
+// audi.__proto__ = car;
+
+// const bmw_x5 = {
+//     color: "white",
+//     name: "x5",
+// };
+
+// bmw_x5.__proto__ = bmw;
+
+// const car = {
+//     wheels: 4,
+//     driver() {
+//         console.log("driver..");
+//     },
+// };
+
+// const Bmw = function(color){
+//     this.color = color;
+// };
+
+// Bmw.prototype.wheels = 4;
+// Bmw.prototype.dirve = function() {
+//     console.log("drive..");
+// }
+// Bmw.prototype.stop = function() {
+//     console.log("stop!!!");
+// }
+
+// const bmw_x5 = new Bmw("red");
+// const bmw_x4 = new Bmw("blue");
+
+
+// bmw_x5.__proto__ = car;
+// bmw_x4.__proto__ = car;
+
+
