@@ -579,4 +579,185 @@ let user1 = users[2];
 // bmw_x5.__proto__ = car;
 // bmw_x4.__proto__ = car;
 
+// const User = function (name, age) {
+//     this.name = name;
+//     this.age = age;
+//     this.showName = function () {
+//         console.log(this.name);
+//     };
+// };
 
+// const doyun = new User("Doyun", 32);
+
+// class User2 {
+//     constructor(name, age) {
+//         this.name = name;
+//         this.age = age;
+//     }
+//     showName() {
+//         console.log(this.name);
+//     }
+// }
+
+// const jieun = new User2("Jieun", 30)
+
+// class Car {
+//     constructor(color) {    //{}
+//         this.color = color;
+//         this.wheels = 4;
+//     }
+//     drive() {
+//         console.log("drive...!");
+//     }
+//     stop() {
+//         console.log("stop!!!");
+//     }
+// }
+
+// class Bmw extends Car {
+//     constructor(color) {
+//         super(color);
+//         this.naigation = 1;
+//     }
+//     park() {
+//         console.log("PARK ~");
+//     }
+//     stop() {
+//         super.stop();
+//         console.log("Bmw Stop!!");
+//     }
+// }
+
+// const z4 = new Bmw("Blue");
+
+// const f1 = (callback) => {
+//     setTimeout(function () {
+//         console.log("1번 주문 완료");
+//         callback();
+//     }, 1000);
+// };
+// const f2 = (callback) => {
+//     setTimeout(function () {
+//         console.log("2번 주문 완료");
+//         callback();
+//     }, 3000);
+// };
+// const f3 = (callback) => {
+//     setTimeout(function () {
+//         console.log("3번 주문 완료");
+//         callback();
+//     }, 2000);
+// };
+
+// console.log('시작');
+// f1(function(){
+//     f2(function(){
+//         f3(function(){
+//             console.log("끝");
+//         })
+//     })
+// })
+
+
+// const f1 = () => {
+//     return new Promise((res, rej) => {
+//         setTimeout(() => {
+//             res("1번 주문완료");
+//         }, 1000);
+//     });
+// };
+
+// const f2 = (message) => {
+//     console.log(message);
+//     return new Promise((res, rej) => {
+//         setTimeout(() => {
+//             res("2번 주문성공");
+//         }, 3000);
+//     });
+// };
+
+// const f3 = (message) => {
+//     console.log(message);
+//     return new Promise((res, rej) => {
+//         setTimeout(() => {
+//             res("3번 주문완료");
+//         }, 2000);
+//     });
+// };
+
+// async function order() {
+//     const result1 = await f1();
+//     const result2 = await f2(result1);
+//     const result3 = await f3(result2);
+//     console.log(result3);
+//     console.log("끝");
+// }
+
+// order();
+
+// async function parallel_order() {
+//     try {
+//         const result = await Promise.all([f1(), f2(), f3()]);
+//         console.log(result);
+//     } catch (e) {
+//         console.log(e);
+//     }
+//     console.log("종료__");
+// }
+
+// parallel_order();
+
+// console.log("시작");
+// f1()
+//     .then((res) => f2(res))
+//     .then((res) => f3(res))
+//     .then((res) => console.log(res))
+//     .catch(console.log)
+//     .finally(() => {
+//         console.log("끝");
+//     });
+
+
+
+// // 함수 앞에 async를 선언해주면
+// // 항상 promise를 반환한다.
+// async function getName() {
+//     return "Doyun";
+// }
+
+// console.log(getName())
+// getName().then(name => {
+//     console.log(name);
+// })
+
+// async function getAge() {
+//     //return Promise.resolve("31");
+//     throw new Error("error");
+// }
+
+// getAge()
+// .then(age => {
+//     console.log(age);
+// })
+// .catch(err => {
+//     console.log(err);
+// })
+
+//await
+// function getName(name){
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve(name);
+//         }, 1000);
+//     });
+// }
+
+// async function showName() {
+//     const result = await getName("Doyun");
+//     console.log(result);
+// }
+
+// console.log("시작");
+// showName();
+
+//const arr = [1, 2, 3, 4, 5];
